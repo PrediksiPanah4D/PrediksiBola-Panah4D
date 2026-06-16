@@ -119,15 +119,13 @@
 <body class="worldcup-gold">
 
 <div class="gold-stars"></div>
+<div class="gold-light left"></div>
+<div class="gold-light right"></div>
 <div class="gold-shine"></div>
 
 <style>
 
-/* =========================
-   RESET
-========================= */
-html,
-body{
+html,body{
 margin:0;
 padding:0;
 width:100%;
@@ -140,90 +138,147 @@ font-family:'Poppins',sans-serif;
    WORLD CUP GOLD BACKGROUND
 ========================= */
 .worldcup-gold{
-
+position:relative;
 background:
 
-radial-gradient(
-circle at top,
-rgba(255,215,0,.15),
-transparent 30%
-),
+radial-gradient(circle at top,
+rgba(255,215,0,.20),
+transparent 25%),
+
+radial-gradient(circle at bottom,
+rgba(255,180,0,.10),
+transparent 30%),
 
 linear-gradient(
 180deg,
 #2b1d00 0%,
-#161000 20%,
+#120d00 25%,
 #080808 55%,
 #000000 100%
 );
 
-position:relative;
+background-attachment:fixed;
 }
 
 /* =========================
-   GOLD PARTICLES (LITE)
+   GOLD PARTICLES
 ========================= */
 .gold-stars{
 position:fixed;
 inset:0;
+overflow:hidden;
 pointer-events:none;
 z-index:1;
-overflow:hidden;
 }
 
-.gold-stars:before{
+.gold-stars:before,
+.gold-stars:after{
 content:'';
 position:absolute;
-inset:0;
+width:300%;
+height:300%;
+left:-100%;
+top:-100%;
 
-background-image:
-radial-gradient(
-circle,
-rgba(255,215,0,.65) 1px,
-transparent 1.6px
-);
+background:
+radial-gradient(circle,
+rgba(255,215,0,.9) 1px,
+transparent 2px);
 
-background-size:90px 90px;
+background-size:80px 80px;
 
-opacity:.25;
+animation:goldFloat 40s linear infinite;
+}
 
-animation:goldFloat 35s linear infinite;
+.gold-stars:after{
+opacity:.3;
+animation-duration:60s;
+transform:rotate(15deg);
 }
 
 @keyframes goldFloat{
-from{
+0%{
 transform:translateY(0);
 }
-to{
-transform:translateY(-300px);
+100%{
+transform:translateY(-600px);
 }
 }
 
 /* =========================
-   GOLD SWEEP
+   STADIUM LIGHTS
+========================= */
+.gold-light{
+position:fixed;
+top:0;
+width:40%;
+height:100%;
+pointer-events:none;
+filter:blur(60px);
+z-index:2;
+}
+
+.gold-light.left{
+left:-10%;
+background:
+radial-gradient(circle,
+rgba(255,215,0,.15),
+transparent 70%);
+animation:leftBeam 8s ease-in-out infinite alternate;
+}
+
+.gold-light.right{
+right:-10%;
+background:
+radial-gradient(circle,
+rgba(255,215,0,.15),
+transparent 70%);
+animation:rightBeam 8s ease-in-out infinite alternate;
+}
+
+@keyframes leftBeam{
+from{
+transform:translateX(-40px);
+}
+to{
+transform:translateX(40px);
+}
+}
+
+@keyframes rightBeam{
+from{
+transform:translateX(40px);
+}
+to{
+transform:translateX(-40px);
+}
+}
+
+/* =========================
+   GOLD SWEEP SHINE
 ========================= */
 .gold-shine{
 position:fixed;
 top:0;
 left:-120%;
-width:30%;
+width:40%;
 height:100%;
 pointer-events:none;
-z-index:2;
+z-index:3;
 
 background:
 linear-gradient(
 90deg,
 transparent,
-rgba(255,215,0,.12),
-rgba(255,255,255,.08),
-rgba(255,215,0,.12),
+rgba(255,215,0,.20),
+rgba(255,255,255,.15),
+rgba(255,215,0,.20),
 transparent
 );
 
 transform:skewX(-20deg);
 
-animation:goldSweep 10s linear infinite;
+animation:goldSweep 8s linear infinite;
 }
 
 @keyframes goldSweep{
@@ -233,47 +288,22 @@ left:150%;
 }
 
 /* =========================
-   HEADER
+   WORLD CUP TITLE
 ========================= */
 .world-cup-title{
 position:relative;
 z-index:10;
 text-align:center;
-padding:25px 15px;
+padding:30px 20px;
 }
 
-/* LOGO */
-.wc-logo{
-width:180px;
-max-width:80%;
-display:block;
-margin:0 auto 15px;
-
-filter:
-drop-shadow(0 0 8px rgba(255,215,0,.7));
-
-animation:logoFloat 5s ease-in-out infinite;
-}
-
-@keyframes logoFloat{
-0%,100%{
-transform:translateY(0);
-}
-50%{
-transform:translateY(-4px);
-}
-}
-
-/* TITLE */
 .world-cup-title h1{
 margin:0;
-
-font-size:34px;
+font-size:38px;
 font-weight:900;
-letter-spacing:2px;
+letter-spacing:3px;
 
-background:
-linear-gradient(
+background:linear-gradient(
 180deg,
 #fff8d6,
 #ffd700,
@@ -284,88 +314,42 @@ linear-gradient(
 -webkit-text-fill-color:transparent;
 
 text-shadow:
-0 0 10px rgba(255,215,0,.4);
+0 0 15px rgba(255,215,0,.7),
+0 0 30px rgba(255,215,0,.5);
 }
 
-/* SUBTITLE */
 .world-cup-title p{
 margin-top:8px;
-font-size:12px;
-letter-spacing:4px;
 color:#ffe082;
+letter-spacing:5px;
+font-size:13px;
 }
 
 /* =========================
-   PREMIUM FRAME
+   OPTIONAL GOLD FRAME
 ========================= */
 body::after{
 content:'';
 position:fixed;
-inset:8px;
-
-border:1px solid rgba(255,215,0,.15);
-
-border-radius:18px;
-
+inset:10px;
+border:1px solid rgba(255,215,0,.20);
 pointer-events:none;
-
+border-radius:20px;
 z-index:999;
-
 box-shadow:
-0 0 12px rgba(255,215,0,.08),
-inset 0 0 10px rgba(255,215,0,.03);
-}
-
-/* =========================
-   PERFORMANCE BOOST
-========================= */
-.gold-stars,
-.gold-shine,
-.wc-logo{
-transform:translateZ(0);
-will-change:transform;
-}
-
-/* =========================
-   MOBILE
-========================= */
-@media(max-width:768px){
-
-.wc-logo{
-width:150px;
-}
-
-.world-cup-title h1{
-font-size:26px;
-}
-
-.world-cup-title p{
-font-size:11px;
-letter-spacing:3px;
-}
-
+0 0 20px rgba(255,215,0,.15),
+inset 0 0 20px rgba(255,215,0,.05);
 }
 
 </style>
-
-<!-- HEADER -->
-
 <div class="world-cup-title">
 
-<img
-src="https://panahkawan.com/images/logoweb.png"
-class="wc-logo"
-alt="Logo">
+    <img src="https://panahkawan.com/images/logoweb.png" class="wc-logo">
 
-<h1>🏆 FIFA WORLD CUP 2026</h1>
-
-<p>PREDICTION CENTER</p>
+    <h1>🏆 FIFA WORLD CUP 2026</h1>
+    <p>PREDICTION CENTER</p>
 
 </div>
-
-<!-- KONTEN WEBSITE DI SINI -->
-
-</body>
 
 
 <div id="backdrop" class="link-body-backdrop" style="backdrop-filter: blur(5px) brightness(82%);-webkit-backdrop-filter: blur(5px) brightness(82%);"></div>
