@@ -119,8 +119,6 @@
 <body class="worldcup-gold">
 
 <div class="gold-stars"></div>
-<div class="gold-light left"></div>
-<div class="gold-light right"></div>
 <div class="gold-shine"></div>
 
 <style>
@@ -128,7 +126,8 @@
 /* =========================
    RESET
 ========================= */
-html,body{
+html,
+body{
 margin:0;
 padding:0;
 width:100%;
@@ -143,32 +142,33 @@ background:#000;
 ========================= */
 .worldcup-gold{
 position:relative;
+min-height:100vh;
 
 background:
-radial-gradient(circle at top,
-rgba(255,215,0,.12),
-transparent 25%),
+radial-gradient(
+circle at top,
+rgba(255,215,0,.10),
+transparent 30%
+),
 
 linear-gradient(
 180deg,
-#2b1d00 0%,
-#120d00 30%,
-#080808 60%,
+#241800 0%,
+#120d00 25%,
+#070707 60%,
 #000000 100%
 );
-
-min-height:100vh;
 }
 
 /* =========================
-   GOLD PARTICLES
+   GOLD PARTICLES ULTRA LITE
 ========================= */
 .gold-stars{
 position:fixed;
 inset:0;
-overflow:hidden;
 pointer-events:none;
 z-index:1;
+opacity:.15;
 }
 
 .gold-stars:before{
@@ -179,15 +179,13 @@ inset:0;
 background-image:
 radial-gradient(
 circle,
-rgba(255,215,0,.75) 1px,
+#ffd700 1px,
 transparent 1.5px
 );
 
-background-size:90px 90px;
+background-size:120px 120px;
 
-opacity:.22;
-
-animation:goldFloat 35s linear infinite;
+animation:goldFloat 80s linear infinite;
 }
 
 @keyframes goldFloat{
@@ -195,61 +193,7 @@ from{
 transform:translateY(0);
 }
 to{
-transform:translateY(-250px);
-}
-}
-
-/* =========================
-   STADIUM LIGHT LEFT
-========================= */
-.gold-light{
-position:fixed;
-top:0;
-width:30%;
-height:100%;
-pointer-events:none;
-z-index:2;
-filter:blur(20px);
-opacity:.4;
-}
-
-.gold-light.left{
-left:-5%;
-
-background:
-radial-gradient(circle,
-rgba(255,215,0,.18),
-transparent 70%);
-
-animation:leftBeam 8s ease-in-out infinite alternate;
-}
-
-.gold-light.right{
-right:-5%;
-
-background:
-radial-gradient(circle,
-rgba(255,215,0,.18),
-transparent 70%);
-
-animation:rightBeam 8s ease-in-out infinite alternate;
-}
-
-@keyframes leftBeam{
-from{
-transform:translateX(-15px);
-}
-to{
-transform:translateX(15px);
-}
-}
-
-@keyframes rightBeam{
-from{
-transform:translateX(15px);
-}
-to{
-transform:translateX(-15px);
+transform:translateY(-120px);
 }
 }
 
@@ -259,28 +203,26 @@ transform:translateX(-15px);
 .gold-shine{
 position:fixed;
 top:0;
-left:-120%;
-width:20%;
+left:-30%;
+width:30%;
 height:100%;
 pointer-events:none;
-z-index:3;
+z-index:2;
 
 background:
 linear-gradient(
 90deg,
 transparent,
-rgba(255,215,0,.08),
+rgba(255,215,0,.03),
 transparent
 );
 
-transform:skewX(-20deg);
-
-animation:goldSweep 12s linear infinite;
+animation:goldSweep 25s linear infinite;
 }
 
 @keyframes goldSweep{
 100%{
-left:150%;
+left:130%;
 }
 }
 
@@ -295,8 +237,13 @@ padding:20px 15px;
 }
 
 /* =========================
-   BIG LOGO
+   BIG LOGO CLICKABLE
 ========================= */
+.logo-link{
+display:block;
+text-decoration:none;
+}
+
 .wc-logo{
 display:block;
 margin:0 auto 20px;
@@ -308,22 +255,18 @@ height:auto;
 object-fit:contain;
 
 filter:
-drop-shadow(0 0 10px rgba(255,215,0,.8))
-drop-shadow(0 0 20px rgba(255,215,0,.4));
+drop-shadow(0 0 6px rgba(255,215,0,.5));
 
-animation:logoFloat 5s ease-in-out infinite;
-
-transform:translateZ(0);
-will-change:transform;
+transition:.3s ease;
+cursor:pointer;
 }
 
-@keyframes logoFloat{
-0%,100%{
-transform:translateY(0);
+.wc-logo:hover{
+transform:scale(1.02);
 }
-50%{
-transform:translateY(-4px);
-}
+
+.wc-logo:active{
+transform:scale(.98);
 }
 
 /* =========================
@@ -348,8 +291,7 @@ linear-gradient(
 -webkit-text-fill-color:transparent;
 
 text-shadow:
-0 0 10px rgba(255,215,0,.6),
-0 0 25px rgba(255,215,0,.3);
+0 0 8px rgba(255,215,0,.5);
 }
 
 .world-cup-title p{
@@ -372,27 +314,21 @@ position:fixed;
 inset:8px;
 
 border:1px solid rgba(255,215,0,.15);
-
 border-radius:20px;
 
 pointer-events:none;
-
 z-index:999;
 
 box-shadow:
-0 0 15px rgba(255,215,0,.08),
-inset 0 0 10px rgba(255,215,0,.03);
+0 0 8px rgba(255,215,0,.05);
 }
 
 /* =========================
    PERFORMANCE BOOST
 ========================= */
 .gold-stars,
-.gold-light,
-.gold-shine,
-.wc-logo{
-transform:translateZ(0);
-backface-visibility:hidden;
+.gold-shine{
+transform:translate3d(0,0,0);
 will-change:transform;
 }
 
@@ -403,7 +339,6 @@ will-change:transform;
 
 .wc-logo{
 width:340px;
-max-width:92%;
 }
 
 .world-cup-title h1{
@@ -423,10 +358,12 @@ letter-spacing:4px;
 
 <div class="world-cup-title">
 
+<a href="https://panahkawan.com" target="_blank" class="logo-link">
 <img
 src="https://panahkawan.com/images/logoweb.png"
 class="wc-logo"
 alt="PANAH4D">
+</a>
 
 <h1>🏆 FIFA WORLD CUP 2026</h1>
 
@@ -434,7 +371,7 @@ alt="PANAH4D">
 
 </div>
 
-<!-- KONTEN WEBSITE ANDA DI SINI -->
+<!-- KONTEN WEBSITE -->
 
 </body>
 
