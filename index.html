@@ -112,6 +112,8 @@
 <link rel="me" href="https://draft.blogger.com/profile/13190729265125792848" />
 <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
 <meta name='google-adsense-platform-domain' content='blogspot.com'/>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
                
     
@@ -2333,9 +2335,173 @@ height:60px;
 font-size:16px;
 }
 
-  }</style>
+  }
+	</style>
+
+<!-- FLOATING SOCIAL GROUP -->
+
+<div class="social-group">
+
+<button id="socialToggle" class="main-social">
+☰
+</button>
+
+<div class="social-menu">
+
+<a href="https://t.me/USERNAME" target="_blank" class="telegram">
+<i class="fab fa-telegram-plane"></i>
+</a>
+
+<a href="https://wa.me/6287774839035" target="_blank" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="https://www.instagram.com/bunaghea/" target="_blank" class="instagram">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.facebook.com/profile.php?id=61590929426893" target="_blank" class="facebook">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+</div>
+
+</div>
+	<style>
+       /* =========================
+             SOCIAL GROUP
+          ========================= */
+
+          .social-group{
+          position:fixed;
+          left:15px;
+          bottom:20px;
+          z-index:99999;
+          }
+
+          /* MAIN BUTTON */
+
+          .main-social{
+          width:60px;
+          height:60px;
+
+          border:none;
+          outline:none;
+
+          cursor:pointer;
+
+          border-radius:18px;
+
+          font-size:26px;
+          font-weight:900;
+
+          color:#111;
+
+          background:
+          linear-gradient(
+          180deg,
+          #FFD700,
+          #FFB800
+          );
+
+          box-shadow:
+          0 0 15px rgba(255,215,0,.4);
+
+          transition:.3s;
+          }
+
+          .main-social:hover{
+          transform:scale(1.05);
+          }
+
+          /* SOCIAL MENU */
+
+          .social-menu{
+          position:absolute;
+          bottom:75px;
+          left:0;
+
+          display:flex;
+          flex-direction:column;
+          gap:10px;
+
+          opacity:0;
+          visibility:hidden;
+
+          transform:translateY(20px);
+
+          transition:.3s ease;
+          }
+
+          .social-menu.show{
+          opacity:1;
+          visibility:visible;
+          transform:translateY(0);
+          }
+
+          /* ICON */
+
+          .social-menu a{
+          width:52px;
+          height:52px;
+
+          display:flex;
+          align-items:center;
+          justify-content:center;
+
+          border-radius:50%;
+
+          font-size:22px;
+          color:#fff;
+
+          text-decoration:none;
+
+          transition:.3s;
+          }
+
+          .social-menu a:hover{
+          transform:scale(1.08);
+          }
+
+          /* COLORS */
+
+          .telegram{
+          background:#29a9eb;
+          }
+
+          .whatsapp{
+          background:#25D366;
+          }
+
+          .instagram{
+          background:linear-gradient(
+          135deg,
+          #f58529,
+          #dd2a7b,
+          #8134af
+          );
+          }
+
+          .facebook{
+          background:#1877F2;
+          }
+	</style>
 </div>	
-       
+       <script>
+   /* SCRIPT SOSMED */
+const socialBtn =
+document.getElementById('socialToggle');
+
+const socialMenu =
+document.querySelector('.social-menu');
+
+socialBtn.addEventListener('click',()=>{
+
+socialMenu.classList.toggle('show');
+
+});
+
+</script>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"29fc4df40a8343e4b1b33da94f82d82a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"83eabe406d9942e2a21630740b8b4a59","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 
@@ -2468,5 +2634,4 @@ font-size:16px;
 
 
 </body>
-
 </html>
