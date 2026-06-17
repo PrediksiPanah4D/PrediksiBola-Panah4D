@@ -270,6 +270,75 @@ transform:scale(1.02);
 transform:scale(.98);
 }
 
+.wc-card{
+  background:
+  radial-gradient(circle at top,rgba(255,215,0,.08),transparent 45%),
+  linear-gradient(180deg,#08152e,#09111f);
+  border:2px solid #FFD700;
+  border-radius:18px;
+  padding:18px;
+  margin:15px 0;
+  color:#fff;
+  box-shadow:
+  0 0 12px rgba(255,215,0,.30),
+  0 0 25px rgba(255,215,0,.10);
+  }
+
+.wc-title{
+text-align:center;
+font-size:18px;
+font-weight:800;
+color:#FFD700;
+margin-bottom:15px;
+}
+
+.wc-match{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.wc-team{
+width:40%;
+text-align:center;
+font-weight:700;
+}
+
+.wc-team img{
+width:65px;
+}
+
+.wc-vs{
+width:20%;
+text-align:center;
+}
+
+.wc-vs span{
+display:block;
+font-size:30px;
+font-weight:900;
+color:#FFD700;
+}
+
+.wc-date{
+font-size:12px;
+color:#FFD700;
+}
+
+.wc-line{
+height:1px;
+margin:15px 0;
+background:linear-gradient(90deg,transparent,#FFD700,transparent);
+}
+
+.wc-pred{
+text-align:center;
+line-height:1.8;
+}
+
+.wc-pred b{
+color:#FFD700;
+}
 /* =========================
    TITLE
 ========================= */
@@ -1602,7 +1671,7 @@ text-shadow:
 <div class="score">0 : 0</div>
 <div class="team"><img src="https://flagcdn.com/w80/jo.png"><div>JORDAN</div></div>
 </div>
-<a href="https://panahkawan.com" class="bet-btn">PREDIKSI</a>
+<a href="https://panahkawan.com" class="bet-btn">BET NOW</a>
 </div>
 </div>
 
@@ -1626,7 +1695,7 @@ text-shadow:
 <div class="score">0 : 0</div>
 <div class="team"><img src="https://flagcdn.com/w80/cd.png"><div>D.R. CONGO</div></div>
 </div>
-<a href="https://panahkawan.com" class="bet-btn">PREDIKSI</a>
+<a href="https://panahkawan.com" class="bet-btn">BET NOW</a>
 </div>
 </div>
 
@@ -1650,7 +1719,7 @@ text-shadow:
 <div class="score">0 : 0</div>
 <div class="team"><img src="https://flagcdn.com/w80/hr.png"><div>CROATIA</div></div>
 </div>
-<a href="https://panahkawan.com" class="bet-btn">PREDIKSI</a>
+<a href="https://panahkawan.com" class="bet-btn">BET NOW</a>
 </div>
 </div>
 
@@ -1674,7 +1743,7 @@ text-shadow:
 <div class="score">0 : 0</div>
 <div class="team"><img src="https://flagcdn.com/w80/pa.png"><div>PANAMA</div></div>
 </div>
-<a href="https://panahkawan.com" class="bet-btn">PREDIKSI</a>
+<a href="https://panahkawan.com" class="bet-btn">BET NOW</a>
 </div>
 </div>
 
@@ -1698,7 +1767,7 @@ text-shadow:
 <div class="score">0 : 0</div>
 <div class="team"><img src="https://flagcdn.com/w80/co.png"><div>COLOMBIA</div></div>
 </div>
-<a href="https://panahkawan.com" class="bet-btn">PREDIKSI</a>
+<a href="https://panahkawan.com" class="bet-btn">BET NOW</a>
 </div>
 </div>
 
@@ -1723,7 +1792,7 @@ text-shadow:
 <div class="score">0 : 0</div>
 <div class="team"><img src="https://flagcdn.com/w80/za.png"><div>SOUTH AFRICA</div></div>
 </div>
-<a href="https://panahkawan.com" class="bet-btn">PREDIKSI</a>
+<a href="https://panahkawan.com" class="bet-btn">BET NOW</a>
 </div>
 </div>
 
@@ -1747,7 +1816,7 @@ text-shadow:
 <div class="score">0 : 0</div>
 <div class="team"><img src="https://flagcdn.com/w80/ba.png"><div>BOSNIA & HERZEGOVINA</div></div>
 </div>
-<a href="https://panahkawan.com" class="bet-btn">PREDIKSI</a>
+<a href="https://panahkawan.com" class="bet-btn">BET NOW</a>
 </div>
 </div>
 
@@ -1771,7 +1840,7 @@ text-shadow:
 <div class="score">0 : 0</div>
 <div class="team"><img src="https://flagcdn.com/w80/qa.png"><div>QATAR</div></div>
 </div>
-<a href="https://panahkawan.com" class="bet-btn">PREDIKSI</a>
+<a href="https://panahkawan.com" class="bet-btn">BET NOW</a>
 </div>
 </div>
 
@@ -1795,7 +1864,7 @@ text-shadow:
 <div class="score">0 : 0</div>
 <div class="team"><img src="https://flagcdn.com/w80/kr.png"><div>SOUTH KOREA</div></div>
 </div>
-<a href="https://panahkawan.com" class="bet-btn">PREDIKSI</a>
+<a href="https://panahkawan.com" class="bet-btn">BET NOW</a>
 </div>
 </div>
 </div>
@@ -1842,370 +1911,251 @@ speed:800
 
 
 <!-- MATCH 5 -->
-<div style="background:#0b1020;color:#fff;padding:15px;border-radius:15px;margin:15px 0;box-shadow:0 0 15px rgba(0,255,255,.15)">
-<div style="display:flex;justify-content:space-between;align-items:center;">
-
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/fr.png" width="60">
-<div style="margin-top:8px;font-weight:700">FRANCE</div>
+<div style="max-width:600px;margin:auto;font-family:Poppins,Arial,sans-serif;">
+
+<!-- MATCH 1 -->
+      <div class="wc-card">
+      <div class="wc-title">🏆 FIFA WORLD CUP 2026</div>
+      <div class="wc-match">
+      <div class="wc-team">
+      <img src="https://flagcdn.com/w80/fr.png">
+      <div>FRANCE</div>
+      </div>
+      <div class="wc-vs">
+      <span>VS</span>
+      <div class="wc-date">17 JUN • 02.00 WIB</div>
+      </div>
+      <div class="wc-team">
+      <img src="https://flagcdn.com/w80/sn.png">
+      <div>SENEGAL</div>
+      </div>
+      </div>
+      <div class="wc-line"></div>
+      <div class="wc-pred">
+      <div><b>Prediksi Skor:</b> 3 - 1</div>
+      <div><b>Handicap:</b> France -1¼</div>
+      <div><b>Over/Under:</b> Over 2½</div>
+      <div><b>Rekomendasi:</b> FRANCE</div>
 </div>
 
-<div style="text-align:center;width:20%">
-<div style="font-size:24px;font-weight:800;color:#00e5ff">VS</div>
-<div style="color:#ffd700;font-size:13px;">17/06 • 02.00 WIB</div>
-</div>
-
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/sn.png" width="60">
-<div style="margin-top:8px;font-weight:700">SENEGAL</div>
-</div>
-
-</div>
-
-<hr style="border-color:#1d2748;margin:12px 0;">
-
-<div style="text-align:center;">
-<div><b>Prediksi Skor:</b> 3 - 1</div>
-<div><b>Handicap:</b> France -1¼</div>
-<div><b>Over/Under:</b> Over 2½</div>
-<div><b>Rekomendasi:</b> FRANCE</div>
-</div>
-</div>
-
-
-<!-- MATCH 6 -->
-<div style="background:#0b1020;color:#fff;padding:15px;border-radius:15px;margin:15px 0;box-shadow:0 0 15px rgba(0,255,255,.15)">
-<div style="display:flex;justify-content:space-between;align-items:center;">
-
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/iq.png" width="60">
-<div style="margin-top:8px;font-weight:700">IRAQ</div>
-</div>
-
-<div style="text-align:center;width:20%">
-<div style="font-size:24px;font-weight:800;color:#00e5ff">VS</div>
-<div style="color:#ffd700;font-size:13px;">17/06 • 05.00 WIB</div>
-</div>
-
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/no.png" width="60">
-<div style="margin-top:8px;font-weight:700">NORWAY</div>
-</div>
-
-</div>
-
-<hr style="border-color:#1d2748;margin:12px 0;">
-
-<div style="text-align:center;">
-<div><b>Prediksi Skor:</b> 3 - 1</div>
-<div><b>Handicap:</b> Iraq -2</div>
-<div><b>Over/Under:</b> Over 3</div>
-<div><b>Rekomendasi:</b> IRAQ</div>
-</div>
-</div>
-
-
-<!-- MATCH 7 -->
-<div style="background:#0b1020;color:#fff;padding:15px;border-radius:15px;margin:15px 0;box-shadow:0 0 15px rgba(0,255,255,.15)">
-<div style="display:flex;justify-content:space-between;align-items:center;">
-
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/ar.png" width="60">
-<div style="margin-top:8px;font-weight:700">ARGENTINA</div>
-</div>
-
-<div style="text-align:center;width:20%">
-<div style="font-size:24px;font-weight:800;color:#00e5ff">VS</div>
-<div style="color:#ffd700;font-size:13px;">17/06 • 08.00 WIB</div>
-</div>
-
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/dz.png" width="60">
-<div style="margin-top:8px;font-weight:700">ALGERIA</div>
-</div>
-
-</div>
-
-<hr style="border-color:#1d2748;margin:12px 0;">
-
-<div style="text-align:center;">
-<div><b>Prediksi Skor:</b> 3 - 1</div>
-<div><b>Handicap:</b> Argentina -1¼</div>
-<div><b>Over/Under:</b> Over 2½</div>
-<div><b>Rekomendasi:</b> ARGENTINA</div>
-</div>
-</div>
-
-<!-- MATCH 8-->
-<div style="background:#0b1020;color:#fff;padding:15px;border-radius:15px;margin:15px 0;box-shadow:0 0 15px rgba(0,255,255,.15)">
-<div style="display:flex;justify-content:space-between;align-items:center;">
-
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/at.png" width="60">
-<div style="margin-top:8px;font-weight:700">AUSTRIA</div>
-</div>
-
-<div style="text-align:center;width:20%">
-<div style="font-size:24px;font-weight:800;color:#00e5ff">VS</div>
-<div style="color:#ffd700;font-size:13px;">17/06 • 11.00 WIB</div>
-</div>
-
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/jo.png" width="60">
-<div style="margin-top:8px;font-weight:700">JORDAN</div>
-</div>
-
-</div>
-
-<hr style="border-color:#1d2748;margin:12px 0;">
-
-<div style="text-align:center;">
-<div><b>Prediksi Skor:</b> 3 - 0</div>
-<div><b>Handicap:</b> Austria -1½</div>
-<div><b>Over/Under:</b> Over 2¾</div>
-<div><b>Rekomendasi:</b> AUSTRIA</div>
-</div>
-</div>
 
-<!-- MATCH 9-->
-<div style="background:#0b1020;color:#fff;padding:15px;border-radius:15px;margin:15px 0;box-shadow:0 0 15px rgba(0,255,255,.15)">
-<div style="display:flex;justify-content:space-between;align-items:center;">
-
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/gb-eng.png" width="60">
-<div style="margin-top:8px;font-weight:700">ENGLAND</div>
-</div>
-
-<div style="text-align:center;width:20%">
-<div style="font-size:24px;font-weight:800;color:#00e5ff">VS</div>
-<div style="color:#ffd700;font-size:13px;">17/06 • 17.00 WIB</div>
-</div>
-
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/hr.png" width="60">
-<div style="margin-top:8px;font-weight:700">CROATIA</div>
-</div>
-
-</div>
-
-<hr style="border-color:#1d2748;margin:12px 0;">
-
-<div style="text-align:center;">
-<div><b>Prediksi Skor:</b> 2 - 1</div>
-<div><b>Handicap:</b> England -½</div>
-<div><b>Over/Under:</b> Over 2½</div>
-<div><b>Rekomendasi:</b> ENGLAND</div>
 </div>
-</div>
+      <div class="wc-card">
+      <div class="wc-title">🏆 FIFA WORLD CUP 2026</div>
 
-<!-- MATCH 10 -->
-<div style="background:#0b1020;color:#fff;padding:15px;border-radius:15px;margin:15px 0;box-shadow:0 0 15px rgba(0,255,255,.15)">
-<div style="display:flex;justify-content:space-between;align-items:center;">
+      <div class="wc-match">
+      <div class="wc-team">
+      <img src="https://flagcdn.com/w80/iq.png">
+      <div>IRAQ</div>
+      </div>
+
+      <div class="wc-vs">
+      <span>VS</span>
+      <div class="wc-date">17 JUN • 05.00 WIB</div>
+      </div>
+
+      <div class="wc-team">
+      <img src="https://flagcdn.com/w80/no.png">
+      <div>NORWAY</div>
+      </div>
+      </div>
+
+      <div class="wc-line"></div>
 
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/gh.png" width="60">
-<div style="margin-top:8px;font-weight:700">GHANA</div>
-</div>
+      <div class="wc-pred">
+      <div><b>Prediksi Skor:</b> 3 - 1</div>
+      <div><b>Handicap:</b> Iraq -2</div>
+      <div><b>Over/Under:</b> Over 3</div>
+      <div><b>Rekomendasi:</b> IRAQ</div>
 
-<div style="text-align:center;width:20%">
-<div style="font-size:24px;font-weight:800;color:#00e5ff">VS</div>
-<div style="color:#ffd700;font-size:13px;">17/06 • 20.00 WIB</div>
 </div>
-
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/pa.png" width="60">
-<div style="margin-top:8px;font-weight:700">PANAMA</div>
 </div>
 
-</div>
+      <div class="wc-card">
+      <div class="wc-title">🏆 FIFA WORLD CUP 2026</div>
 
-<hr style="border-color:#1d2748;margin:12px 0;">
+      <div class="wc-match">
+      <div class="wc-team">
+      <img src="https://flagcdn.com/w80/ar.png">
+      <div>ARGENTINA</div>
+      </div>
 
-<div style="text-align:center;">
-<div><b>Prediksi Skor:</b> 2 - 1</div>
-<div><b>Handicap:</b> Ghana -½</div>
-<div><b>Over/Under:</b> Over 2½</div>
-<div><b>Rekomendasi:</b> GHANA</div>
-</div>
-</div>
+      <div class="wc-vs">
+      <span>VS</span>
+      <div class="wc-date">17 JUN • 08.00 WIB</div>
+      </div>
 
-<!-- MATCH 11 -->
-<div style="background:#0b1020;color:#fff;padding:15px;border-radius:15px;margin:15px 0;box-shadow:0 0 15px rgba(0,255,255,.15)">
-<div style="display:flex;justify-content:space-between;align-items:center;">
+      <div class="wc-team">
+      <img src="https://flagcdn.com/w80/dz.png">
+      <div>ALGERIA</div>
+      </div>
+      </div>
 
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/uz.png" width="60">
-<div style="margin-top:8px;font-weight:700">UZBEKISTAN</div>
-</div>
+      <div class="wc-line"></div>
 
-<div style="text-align:center;width:20%">
-<div style="font-size:24px;font-weight:800;color:#00e5ff">VS</div>
-<div style="color:#ffd700;font-size:13px;">17/06 • 23.00 WIB</div>
-</div>
+      <div class="wc-pred">
+      <div><b>Prediksi Skor:</b> 3 - 1</div>
+      <div><b>Handicap:</b> Argentina -1¼</div>
+      <div><b>Over/Under:</b> Over 2½</div>
+      <div><b>Rekomendasi:</b> ARGENTINA</div>
 
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/co.png" width="60">
-<div style="margin-top:8px;font-weight:700">COLOMBIA</div>
 </div>
-
 </div>
 
-<hr style="border-color:#1d2748;margin:12px 0;">
-
-<div style="text-align:center;">
-<div><b>Prediksi Skor:</b> 1 - 2</div>
-<div><b>Handicap:</b> Colombia -¾</div>
-<div><b>Over/Under:</b> Over 2¼</div>
-<div><b>Rekomendasi:</b> COLOMBIA</div>
-</div>
-</div>
+      <div class="wc-card">
+      <div class="wc-title">🏆 FIFA WORLD CUP 2026</div>
 
-<!-- MATCH 12 -->
-<div style="background:#0b1020;color:#fff;padding:15px;border-radius:15px;margin:15px 0;box-shadow:0 0 15px rgba(0,255,255,.15)">
-<div style="display:flex;justify-content:space-between;align-items:center;">
+      <div class="wc-match">
+      <div class="wc-team">
+      <img src="https://flagcdn.com/w80/cz.png">
+      <div>CZECHIA</div>
+      </div>
 
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/cz.png" width="60">
-<div style="margin-top:8px;font-weight:700">CZECH REPUBLIC</div>
-</div>
+      <div class="wc-vs">
+      <span>VS</span>
+      <div class="wc-date">18 JUN • 23.00 WIB</div>
+      </div>
 
-<div style="text-align:center;width:20%">
-<div style="font-size:24px;font-weight:800;color:#00e5ff">VS</div>
-<div style="color:#ffd700;font-size:13px;">18/06 • 02.00 WIB</div>
-</div>
+      <div class="wc-team">
+      <img src="https://flagcdn.com/w80/za.png">
+      <div>SOUTH AFRICA</div>
 
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/za.png" width="60">
-<div style="margin-top:8px;font-weight:700">SOUTH AFRICA</div>
 </div>
-
 </div>
 
-<hr style="border-color:#1d2748;margin:12px 0;">
+      <div class="wc-line"></div>
 
-<div style="text-align:center;">
-<div><b>Prediksi Skor:</b> 2 - 0</div>
-<div><b>Handicap:</b> Czech Republic -¾</div>
-<div><b>Over/Under:</b> Under 2½</div>
-<div><b>Rekomendasi:</b> CZECH REPUBLIC</div>
-</div>
-</div>
-
-<!-- MATCH 13 -->
-<div style="background:#0b1020;color:#fff;padding:15px;border-radius:15px;margin:15px 0;box-shadow:0 0 15px rgba(0,255,255,.15)">
-<div style="display:flex;justify-content:space-between;align-items:center;">
+      <div class="wc-pred">
+      <div><b>Prediksi Skor:</b> 2 - 0</div>
+      <div><b>Handicap:</b> Czechia -¾</div>
+      <div><b>Over/Under:</b> Under 2½</div>
+      <div><b>Rekomendasi:</b> CZECHIA</div>
+      </div>
+      </div>
+      <div class="wc-card">
+      <div class="wc-title">🏆 FIFA WORLD CUP 2026</div>
 
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/ch.png" width="60">
-<div style="margin-top:8px;font-weight:700">SWITZERLAND</div>
-</div>
+      <div class="wc-match">
+      <div class="wc-team">
+      <img src="https://flagcdn.com/w80/pt.png">
+      <div>PORTUGAL</div>
+      </div>
 
-<div style="text-align:center;width:20%">
-<div style="font-size:24px;font-weight:800;color:#00e5ff">VS</div>
-<div style="color:#ffd700;font-size:13px;">18/06 • 05.00 WIB</div>
-</div>
+      <div class="wc-vs">
+      <span>VS</span>
+      <div class="wc-date">18 JUN • 00.00 WIB</div>
+      </div>
 
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/ba.png" width="60">
-<div style="margin-top:8px;font-weight:700">BOSNIA & HERZEGOVINA</div>
-</div>
+      <div class="wc-team">
+      <img src="https://flagcdn.com/w80/cd.png">
+      <div>DR CONGO</div>
+      </div>
+      </div>
 
-</div>
+      <div class="wc-line"></div>
 
-<hr style="border-color:#1d2748;margin:12px 0;">
+      <div class="wc-pred">
+      <div><b>Prediksi Skor:</b> 3 - 0</div>
+      <div><b>Handicap:</b> Portugal -1½</div>
+      <div><b>Over/Under:</b> Over 2¾</div>
+      <div><b>Rekomendasi:</b> PORTUGAL</div>
 
-<div style="text-align:center;">
-<div><b>Prediksi Skor:</b> 2 - 1</div>
-<div><b>Handicap:</b> Switzerland -1</div>
-<div><b>Over/Under:</b> Over 2½</div>
-<div><b>Rekomendasi:</b> SWITZERLAND</div>
 </div>
 </div>
 
-<!-- MATCH 14 -->
-<div style="background:#0b1020;color:#fff;padding:15px;border-radius:15px;margin:15px 0;box-shadow:0 0 15px rgba(0,255,255,.15)">
-<div style="display:flex;justify-content:space-between;align-items:center;">
+      <div class="wc-card">
+      <div class="wc-title">🏆 FIFA WORLD CUP 2026</div>
 
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/ca.png" width="60">
-<div style="margin-top:8px;font-weight:700">CANADA</div>
-</div>
+      <div class="wc-match">
+      <div class="wc-team">
+      <img src="https://flagcdn.com/w80/uz.png">
+      <div>UZBEKISTAN</div>
+      </div>
 
-<div style="text-align:center;width:20%">
-<div style="font-size:24px;font-weight:800;color:#00e5ff">VS</div>
-<div style="color:#ffd700;font-size:13px;">18/06 • 08.00 WIB</div>
-</div>
+      <div class="wc-vs">
+      <span>VS</span>
+      <div class="wc-date">18 JUN • 09.00 WIB</div>
+      </div>
 
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/qa.png" width="60">
-<div style="margin-top:8px;font-weight:700">QATAR</div>
-</div>
+      <div class="wc-team">
+      <img src="https://flagcdn.com/w80/co.png">
+      <div>COLOMBIA</div>
+      </div>
+      </div>
 
-</div>
+      <div class="wc-line"></div>
 
-<hr style="border-color:#1d2748;margin:12px 0;">
+      <div class="wc-pred">
+      <div><b>Prediksi Skor:</b> 1 - 2</div>
+      <div><b>Handicap:</b> Colombia -¾</div>
+      <div><b>Over/Under:</b> Over 2¼</div>
+      <div><b>Rekomendasi:</b> COLOMBIA</div>
 
-<div style="text-align:center;">
-<div><b>Prediksi Skor:</b> 2 - 1</div>
-<div><b>Handicap:</b> Canada -½</div>
-<div><b>Over/Under:</b> Over 2½</div>
-<div><b>Rekomendasi:</b> CANADA</div>
-</div>
 </div>
-
-
-<!-- MATCH 15 -->
-<div style="background:#0b1020;color:#fff;padding:15px;border-radius:15px;margin:15px 0;box-shadow:0 0 15px rgba(0,255,255,.15)">
-<div style="display:flex;justify-content:space-between;align-items:center;">
-
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/mx.png" width="60">
-<div style="margin-top:8px;font-weight:700">MEXICO</div>
 </div>
 
-<div style="text-align:center;width:20%">
-<div style="font-size:24px;font-weight:800;color:#00e5ff">VS</div>
-<div style="color:#ffd700;font-size:13px;">18/06 • 11.00 WIB</div>
-</div>
+      <div class="wc-card">
+      <div class="wc-title">🏆 FIFA WORLD CUP 2026</div>
 
-<div style="text-align:center;width:40%">
-<img src="https://flagcdn.com/w80/kr.png" width="60">
-<div style="margin-top:8px;font-weight:700">SOUTH KOREA</div>
-</div>
+      <div class="wc-match">
+      <div class="wc-team">
+      <img src="https://flagcdn.com/w80/gb-eng.png">
+      <div>ENGLAND</div>
+      </div>
 
-</div>
+      <div class="wc-vs">
+      <span>VS</span>
+      <div class="wc-date">18 JUN • 03.00 WIB</div>
+      </div>
 
-<hr style="border-color:#1d2748;margin:12px 0;">
+      <div class="wc-team">
+      <img src="https://flagcdn.com/w80/hr.png">
+      <div>CROATIA</div>
+      </div>
+      </div>
 
-<div style="text-align:center;">
-<div><b>Prediksi Skor:</b> 2 - 2</div>
-<div><b>Handicap:</b> 0 : 0</div>
-<div><b>Over/Under:</b> Over 2¾</div>
-<div><b>Rekomendasi:</b> OVER 2¾</div>
-</div>
-</div>
+      <div class="wc-line"></div>
 
-<!-- MATCH 16 -->
+      <div class="wc-pred">
+      <div><b>Prediksi Skor:</b> 2 - 1</div>
+      <div><b>Handicap:</b> England -½</div>
+      <div><b>Over/Under:</b> Over 2½</div>
+      <div><b>Rekomendasi:</b> ENGLAND</div>
 
 </div>
-
-
-<!-- MATCH 17 -->
-
 </div>
 
+      <div class="wc-card">
+      <div class="wc-title">🏆 FIFA WORLD CUP 2026</div>
 
-<!-- MATCH 18 -->
+      <div class="wc-match">
+      <div class="wc-team">
+      <img src="https://flagcdn.com/w80/gh.png">
+      <div>GHANA</div>
+      </div>
 
-</div>
+      <div class="wc-vs">
+      <span>VS</span>
+      <div class="wc-date">18 JUN • 06.00 WIB</div>
+      </div>
 
-<!-- MATCH -->
+      <div class="wc-team">
+      <img src="https://flagcdn.com/w80/pa.png">
+      <div>PANAMA</div>
+      </div>
+      </div>
 
-</div>
+      <div class="wc-line"></div>
 
-<!-- MATCH -->
+      <div class="wc-pred">
+      <div><b>Prediksi Skor:</b> 2 - 1</div>
+      <div><b>Handicap:</b> Ghana -½</div>
+      <div><b>Over/Under:</b> Over 2½</div>
+      <div><b>Rekomendasi:</b> GHANA</div>
 
+	</div>
 </div>
+ </div>
 
 <!-- FOOTER -->
 <footer class="provider-footer">
@@ -2634,4 +2584,5 @@ socialMenu.classList.toggle('show');
 
 
 </body>
+
 </html>
