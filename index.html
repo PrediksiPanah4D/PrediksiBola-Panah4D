@@ -1148,14 +1148,26 @@ text-shadow:
     margin-top:-3px;
 }
 /* LEAGUE TITLE */
-
 .league-title{
-    font-size:18px;
+    font-size:14px;
     font-weight:800;
-    color:#fff;
+
+    background:linear-gradient(
+        180deg,
+        #fff8cc 0%,
+        #ffd700 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-align:center;
+    line-height:1.3;
 
     text-shadow:
-    0 0 15px rgba(255,215,0,.6);
+        0 0 10px rgba(255,215,0,.4);
+
+    padding:0 8px;
 }
 
 /* PAGINATION */
@@ -1338,23 +1350,6 @@ text-shadow:
         left:200%;
     }
 
-}
-.league-title{
-    font-size:18px;
-    font-weight:900;
-
-    background:
-    linear-gradient(
-    180deg,
-    #fff8cc,
-    #ffd700
-    );
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-
-    text-shadow:
-    0 0 15px rgba(255,215,0,.4);
 }
  .vip-badge{
     position:absolute;
@@ -1616,7 +1611,7 @@ text-shadow:
 
 <div class="lightning"></div>
 <div class="vip-badge">VIP</div>
-<div class="league-title">⚽ FIFA WORLD CUP 2026 - GROUP G ⚽</div>
+<div class="league-title"> FIFA WORLD CUP 2026 - GROUP G </div>
 <div class="match-time">22 JUN 2026 - 08.00 WIB</div>
 <div class="match-row">
 <div class="team"><img src="https://flagcdn.com/w80/nz.png"><div>NEW ZEALAND</div></div>
