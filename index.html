@@ -2750,11 +2750,13 @@ transform:translateY(-285px);
           }
 	</style>
 </div>	
-  <!-- LOADING SCREEN -->
+<!-- LOADING SCREEN -->
 <div id="loader">
     <div class="loader-content">
 
-        <img src="https://panahkawan.com/images/logoweb.png" class="loader-logo" alt="PANAH4D">
+        <img src="https://panahkawan.com/images/logoweb.png"
+             class="loader-logo"
+             alt="PANAH4D">
 
         <div class="loader-bar">
             <div class="loader-progress"></div>
@@ -2767,158 +2769,253 @@ transform:translateY(-285px);
     </div>
 </div>
   <style>
-    /*==========================
-   PANAH4D LOADING SCREEN
-==========================*/
+/* ==========================
+      PANAH4D LOADER V2
+========================== */
 
 #loader{
     position:fixed;
     inset:0;
     width:100%;
     height:100%;
-    background:
-    radial-gradient(circle at center,#1a1a1a 0%,#0b0b0b 60%,#000 100%);
     display:flex;
     justify-content:center;
     align-items:center;
     z-index:999999;
-    transition:.8s ease;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at center,
+    #1d1d1d 0%,
+    #0b0b0b 60%,
+    #000 100%);
+
+    opacity:1;
+    visibility:visible;
+    transition:
+    opacity .55s ease,
+    visibility .55s ease,
+    transform .55s ease;
 }
 
 .loader-content{
     text-align:center;
+    animation:fadeUp .8s ease;
 }
 
 .loader-logo{
-    width:340px;
+
+    width:320px;
     max-width:85vw;
+
+    user-select:none;
+    pointer-events:none;
+
     animation:
-        logoFloat 2s ease-in-out infinite,
-        logoGlow 2s infinite alternate;
+    logoFloat 2.2s ease-in-out infinite,
+    logoGlow 1.8s ease-in-out infinite alternate;
 }
 
+/* BAR */
+
 .loader-bar{
+
     width:260px;
     height:8px;
-    margin:35px auto 20px;
+
+    margin:32px auto 18px;
+
     background:rgba(255,255,255,.08);
-    border-radius:30px;
+
+    border-radius:50px;
+
     overflow:hidden;
+
     box-shadow:
-    inset 0 0 10px rgba(255,255,255,.15),
-    0 0 15px rgba(255,180,0,.15);
+    inset 0 0 8px rgba(255,255,255,.15),
+    0 0 12px rgba(255,180,0,.2);
+
 }
 
 .loader-progress{
+
     width:0%;
     height:100%;
+
+    border-radius:50px;
+
     background:linear-gradient(
     90deg,
     #ffb300,
-    #ffd54f,
-    #fff8dc,
-    #ffd54f,
+    #ffe082,
+    #fffdf5,
+    #ffe082,
     #ffb300);
+
     background-size:300%;
+
     animation:
-    loadingBar 3s linear forwards,
-    goldMove 2s linear infinite;
+    loadingBar 1s ease forwards,
+    goldMove 1.4s linear infinite;
+
     box-shadow:
     0 0 15px #ffbf00,
-    0 0 25px #ffb300;
+    0 0 25px gold;
+
 }
 
 .loading-text{
-    color:#ffd76a;
-    font-size:18px;
-    letter-spacing:3px;
+
+    color:#ffd54f;
+
+    font-size:17px;
     font-weight:bold;
-    animation:blink 1.2s infinite;
-    text-shadow:0 0 12px gold;
+
+    letter-spacing:4px;
+
+    text-shadow:
+    0 0 10px gold,
+    0 0 20px orange;
+
+    animation:textBlink 1s infinite;
+
 }
+
+/* Hide */
 
 .hide-loader{
+
     opacity:0;
     visibility:hidden;
+    transform:scale(1.03);
+
 }
 
-/* LOGO FLOAT */
+/* ==========================
+        ANIMATION
+========================== */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
 
 @keyframes logoFloat{
 
-0%,100%{
-transform:translateY(0px);
-}
+    0%,100%{
+        transform:translateY(0);
+    }
 
-50%{
-transform:translateY(-10px);
-}
+    50%{
+        transform:translateY(-8px);
+    }
 
 }
 
 @keyframes logoGlow{
 
-from{
-filter:
-drop-shadow(0 0 8px gold)
-drop-shadow(0 0 20px orange);
-}
+    from{
 
-to{
-filter:
-drop-shadow(0 0 18px #fff176)
-drop-shadow(0 0 40px gold);
-}
+        filter:
+        drop-shadow(0 0 8px gold)
+        drop-shadow(0 0 20px orange);
+
+    }
+
+    to{
+
+        filter:
+        drop-shadow(0 0 18px #fff176)
+        drop-shadow(0 0 40px gold);
+
+    }
 
 }
 
 @keyframes loadingBar{
 
-from{
-width:0%;
-}
+    from{
+        width:0%;
+    }
 
-to{
-width:100%;
-}
+    to{
+        width:100%;
+    }
 
 }
 
 @keyframes goldMove{
 
-from{
-background-position:0%;
+    from{
+        background-position:0%;
+    }
+
+    to{
+        background-position:300%;
+    }
+
 }
 
-to{
-background-position:300%;
-}
+@keyframes textBlink{
+
+    0%,100%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.45;
+    }
 
 }
 
-@keyframes blink{
+/* MOBILE */
 
-50%{
-opacity:.4;
+@media(max-width:768px){
+
+.loader-logo{
+    width:240px;
 }
 
-    } 
+.loader-bar{
+    width:220px;
+}
+
+.loading-text{
+    font-size:15px;
+}
+
+}
   </style>
   <script>
 window.addEventListener("load", () => {
 
     const loader = document.getElementById("loader");
 
-    requestAnimationFrame(() => {
+    // Minimum tampil 1 detik agar animasi tetap terlihat
+    setTimeout(() => {
+
         loader.classList.add("hide-loader");
 
+        // Hapus dari DOM setelah animasi selesai
         setTimeout(() => {
+
             loader.remove();
-        }, 500);
-    });
+
+        }, 550);
+
+    }, 1000);
 
 });
-    });</script>
+  </script>
        <script>
    /* SCRIPT SOSMED */
 const socialBtn =
