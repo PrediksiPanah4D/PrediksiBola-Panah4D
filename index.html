@@ -2905,20 +2905,19 @@ opacity:.4;
     } 
   </style>
   <script>
-    window.addEventListener("load", function () {
+window.addEventListener("load", () => {
 
     const loader = document.getElementById("loader");
 
-    setTimeout(function(){
-
+    requestAnimationFrame(() => {
         loader.classList.add("hide-loader");
 
-        setTimeout(function(){
+        setTimeout(() => {
             loader.remove();
-        },800);
+        }, 500);
+    });
 
-    },3000);
-
+});
     });</script>
        <script>
    /* SCRIPT SOSMED */
