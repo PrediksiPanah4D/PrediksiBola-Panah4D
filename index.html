@@ -2910,29 +2910,30 @@ transform:translateY(-285px);
   <script>
 const loader = document.getElementById("loader");
 
-function hideLoader(){
+function hideLoader() {
 
-    if(!loader) return;
+    if (!loader) return;
 
     loader.classList.add("hide-loader");
 
-    setTimeout(()=>{
+    setTimeout(() => {
         loader.remove();
-    },300);
+    }, 400);
 
 }
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () => {
 
-    setTimeout(hideLoader,400);
+    // Delay 800ms agar animasi terlihat smooth
+    setTimeout(hideLoader, 800);
 
 });
 
-// Backup jika ada script yang macet
-window.addEventListener("load",hideLoader);
+// Backup jika halaman lambat
+window.addEventListener("load", hideLoader);
 
-// Paksa hilang maksimal 2 detik
-setTimeout(hideLoader,2000);
+// Paksa hilang maksimal 3 detik jika ada yang macet
+setTimeout(hideLoader, 3000);
   </script>
        <script>
    /* SCRIPT SOSMED */
